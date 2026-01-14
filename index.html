@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cricket Score</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .scorebar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #111;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      border-top: 2px solid #333;
+    }
+
+    .left {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .team {
+      font-weight: bold;
+      color: #4da3ff;
+      font-size: 20px;
+    }
+
+    .overs {
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .batsmen {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✏️ EDIT SCORE HERE -->
+<script>
+  const TEAM = "IND";
+  const RUNS = 145;
+  const WICKETS = 3;
+  const OVERS = "18.2";
+  const BATSMEN = "Kohli 62* • Rohit 41";
+</script>
+<!-- ✏️ STOP EDITING HERE -->
+
+<div class="scorebar">
+  <div class="left">
+    <div class="team" id="team"></div>
+    <div id="score"></div>
+    <div class="overs" id="overs"></div>
+  </div>
+  <div class="batsmen" id="batsmen"></div>
+</div>
+
+<script>
+  document.getElementById("team").textContent = TEAM;
+  document.getElementById("score").textContent = `${RUNS}/${WICKETS}`;
+  document.getElementById("overs").textContent = `(${OVERS} ov)`;
+  document.getElementById("batsmen").textContent = BATSMEN;
+</script>
+
+</body>
+</html>
